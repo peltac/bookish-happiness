@@ -1,5 +1,7 @@
 const crypto = require("crypto");
 
+// CONTRARIAN ANSWER: The function is fine the way it is.
+// See Refactoring.md for more shocking revelations!
 exports.deterministicPartitionKey = (event) => {
   const TRIVIAL_PARTITION_KEY = "0";
   const MAX_PARTITION_KEY_LENGTH = 256;

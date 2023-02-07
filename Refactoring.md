@@ -9,3 +9,20 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+**CONTRARIAN ANSWER:** The function is fine the way it is.
+
+The function is simple enough for me to understand and test during a timed coding interview. That already makes it a decent-ish piece of code.
+
+Some arguments for not changing the code:
+
+ * I have added unit tests that function as documentation to show how the function works.
+ * The function is pure--without side effects. This means that it can be understood in isolation without having to understand the surrounding codebase.
+ * Functions for hashing and partitioning tend to be optimized for performance and portability--not for readability. Go read any implementation of SHA-3 and tell me otherwise.
+ * This is a timed coding interview and I ran out of time. I spent most of my time on the Ticket Breakdown task.
+
+What the function does need:
+ * Comments and docstrings. It's not clear how to use the function, or what context it should be used in.
+ * Type hints. It's not clear what `event` should be.
+ * A design document. It's not clear why anybody would partition anything with the given function implementation.
+ 
